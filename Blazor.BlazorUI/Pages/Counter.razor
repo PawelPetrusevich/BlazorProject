@@ -1,0 +1,21 @@
+﻿@page "/counter"
+@inherits CounterBase
+
+<h1>Counter</h1>
+
+<p>Current count: @currentCount</p>
+
+<button class="btn btn-primary" @onclick="@(e => currentCount++)">Click me</button>
+
+<p>
+    <h3>String bind</h3>
+    <input @onkeypress="LogKeyPressed" />
+    <h5>@Name</h5>
+</p>
+
+<p>
+    <h3>Select</h3>
+<p>
+    <input @bind="Color" @bind:format="dd/MM/yyyy" />
+</p>
+</p>
